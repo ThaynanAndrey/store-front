@@ -69,3 +69,22 @@
   color: var(--light-gray);
   opacity: 1; /* Firefox */
 }
+
+.footerContainer {
+  width: 100%;
+  border-top: 2px solid var(--strong-gray);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  align-items: center;
+}
+
+.footerTitleContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.footerWarning {
+  font-size: 0.75rem;
+}

@@ -1,11 +1,15 @@
+import Ello from "Components/Icons/Ello"
+import Instagram from "Components/Icons/Instagram"
+import Mastercard from "Components/Icons/Mastercard"
 import Search from "Components/Icons/Search"
+import Visa from "Components/Icons/Visa"
 import { FC, ReactNode } from "react"
 import styles from './Layout.module.css'
 
 const perfumOptions = ['masculino', 'feminino', 'compartilhado']
 
 const TopBar: FC = () => (
-  <div className={styles.topbar}>
+  <nav className={styles.topbar}>
     <h3>
       <a href="/" className={styles.titleStyle}>Thayllus</a>
     </h3>
@@ -24,7 +28,20 @@ const TopBar: FC = () => (
       <input className={styles.inputStyle} placeholder="Busque algo..." />
       <Search />
     </div>
-  </div>
+  </nav>
+)
+
+const Footer: FC = () => (
+  <footer className={styles.footerContainer}>
+    <div className={styles.footerTitleContainer}>
+      <h3>Thayllus</h3>
+      <span className={styles.footerWarning}>© Todos os direitos reservados.</span>
+    </div>
+
+    <a href="https://www.instagram.com/thayllusoficial" target="_blank">
+      <Instagram />
+    </a>
+  </footer>
 )
 
 interface Props {
@@ -38,6 +55,8 @@ const Layout: FC<Props> = ({ children }) => (
     <main className={styles.mainContainer}>
       {children}
     </main>
+
+    <Footer />
   </div>
 )
 
