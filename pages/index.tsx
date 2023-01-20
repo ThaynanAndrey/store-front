@@ -5,7 +5,7 @@ import ProductCard from 'Components/ProductCard'
 
 const products: ProductData[] = [
   {
-    name: 'Ferrari Black',
+    name: 'KIT COFFRET LADY MILLION FABULOUS INTENSE FEMININO de PACO RABANNE Eau da Parfum - 01 EAU de PARFUM 80ml + 01 BODY LOTION 100ml',
     value: 550,
     discount: 0.1,
     maxInstallments: 5,
@@ -101,9 +101,16 @@ export default function Home() {
       </Head>
 
       <section className={styles.container}>
-        {products.map((product, id) => (
-          <ProductCard key={id} product={product} />
-        ))}
+        <div className={styles.highlightCotainer}>
+          <h3 className={styles.highlightTitle}>Destaques</h3>
+          <hr className={styles.highlightDivider} />
+        </div>
+
+        <div className={styles.productsContainer}>
+          {products.map((product, id) => (
+            <ProductCard key={id} product={product} />
+          ))}
+        </div>
       </section>
     </>
   )

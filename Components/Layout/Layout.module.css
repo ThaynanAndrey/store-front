@@ -20,6 +20,8 @@
   padding: 0.5rem 1.5rem;
   position: sticky;
   color: white;
+  top: 0;
+  z-index: 1000;
 }
 
 .titleStyle {

@@ -6,14 +6,20 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  min-height: 200px;
+  max-width: 300px;
+  height: 300px;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  padding: 1rem;
+  padding: 0.75rem;
+  position: relative;
 }
 
 .container:hover {
   box-shadow: 0 0 0.25rem rgb(0 0 0 / 30%);
+}
+
+.container:hover > div.learnMoreTag {
+  display: flex;
 }
 
 .imageContainer {
@@ -26,6 +32,18 @@
   font-weight: normal;
   font-size: 0.875rem;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.realPrice {
+  font-size: 0.75rem;
+  text-align: center;
+  text-decoration: line-through;
+  color: var(--light-gray);
 }
 
 .productPrice {
@@ -45,4 +63,27 @@
   color: var(--light-gray);
   font-size: 0.875rem;
   text-align: center;
+}
+
+.discountTag {
+  background-color: var(--light-yellow);
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  position: absolute;
+  color: white;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 0.625rem;
+}
+
+.learnMoreTag {
+  background-color: var(--strong-yellow);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
 }
